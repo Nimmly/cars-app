@@ -7,11 +7,12 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 const routes = [
   { path: '/', redirect: '/cars'},
-  { path: '/cars', component: AppCars}
+  { path: '/cars', component: AppCars, name:'cars'}
   
 ]
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 new Vue({
